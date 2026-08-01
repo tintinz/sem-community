@@ -11,6 +11,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 > `(by @author in #PR)` attribution. Older entries (≤ beta.13) stay in the
 > prose-paragraph style they were written in.
 
+# [1.7.5-beta.34.2] — 01.08.2026
+
+### 🐛 Fixes
+
+- 🚗 **Vehicle range now honours its source unit** — metre- and mile-based range sensors are normalised to kilometres; unknown, non-finite and negative values are rejected instead of producing inflated diagnostics.
+- 🔌 **Zaptec discovery now selects a real charger, not the site aggregate** — charger-specific entity patterns, platform variants, stable IDs and mirrored data/options persistence keep auto-discovery intact across options saves and restarts.
+- 🌙 **No charger means no night-charging plan** — stale legacy EV sensors can no longer create a target or connected/charging state without a registered controllable charger.
+
+### 🧪 Observer preview
+
+- ⚡ **Independent per-phase diagnostics for Grid and hybrid Load/EPS paths** — the topology wizard supports grid-only and hybrid installations, applies separate configurable limits, calculates grid current as `abs(W/V)`, validates W/V/A units and fails closed for missing, stale, invalid or negative RMS values. This prerelease is read-only and sends no control commands.
+
 # [1.7.5-beta.34] — 31.07.2026
 
 ### 🐛 Fixes
