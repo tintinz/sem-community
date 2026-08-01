@@ -11,6 +11,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 > `(by @author in #PR)` attribution. Older entries (≤ beta.13) stay in the
 > prose-paragraph style they were written in.
 
+# [1.7.5-beta.34.3] — 01.08.2026
+
+### 🧪 Observer preview
+
+- ⚡ **Direct per-phase grid-current sources** — the phase guard can now use a complete L1-L3 family of non-negative RMS current sensors in A, with conservative discovery for one coherent meter family and the existing `abs(W/V)` path as fallback. Partial, ambiguous, stale, unavailable, wrong-unit or negative readings fail closed. The transport that supplies the Home Assistant sensors remains outside SEM; this release does not implement a radio protocol or issue control commands.
+
 # [1.7.5-beta.34.2] — 01.08.2026
 
 ### 🐛 Fixes
